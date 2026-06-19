@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultas do Funcionário</title>
+</head>
+
+<body>
+
+<h1>👨‍⚕️ Consultas Agendadas</h1>
+
+<hr>
+
+{% for consulta in consultas %}
+
+    <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+
+        <h2>🐶 {{ consulta.nome_pet }}</h2>
+
+        <p><strong>Dono:</strong> {{ consulta.nome_dono }}</p>
+
+        <p><strong>CPF:</strong> {{ consulta.cpf }}</p>
+
+        <p><strong>Telefone:</strong> {{ consulta.telefone }}</p>
+
+        <p><strong>Email:</strong> {{ consulta.email }}</p>
+
+        <p><strong>Espécie:</strong> {{ consulta.especie }}</p>
+
+        <p><strong>Raça:</strong> {{ consulta.raca }}</p>
+
+        <p><strong>Atendimento:</strong> {{ consulta.atendimento }}</p>
+
+        <p><strong>Horário:</strong> {{ consulta.horario }}</p>
+
+        <hr>
+
+        <!-- ❌ BOTÃO DE DELETAR -->
+        <form method="POST" action="{% url 'deletar_consulta' consulta.id %}">
+            {% csrf_token %}
+
+            <button type="submit"
+                    style="background:red; color:white; padding:8px; border:none; cursor:pointer;">
+                ❌ Deletar consulta
+            </button>
+        </form>
+
+    </div>
+
+{% empty %}
+
+    <p>Nenhuma consulta cadastrada.</p>
+
+{% endfor %}
+
+<br>
+
+<a href="{% url 'painel_funcionario' %}">
+    <button>Voltar ao Painel</button>
+</a>
+
+</body>
+</html>

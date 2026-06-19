@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    background:#f7f2ff;
+}
+
+/* CONTAINER */
+.container-login{
+    display:flex;
+    height:100vh;
+}
+
+/* IMAGEM */
+.lado-imagem{
+    flex:1;
+}
+
+.lado-imagem img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* FORMULÁRIO */
+.lado-formulario{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:white;
+    padding:40px;
+}
+
+/* TITULOS */
+.lado-formulario h1{
+    color:#6a0dad;
+    font-size:36px;
+}
+
+.lado-formulario h2{
+    color:#555;
+    margin-bottom:25px;
+}
+
+/* FORM */
+form{
+    width:100%;
+    max-width:350px;
+}
+
+/* LABEL */
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    color:#6a0dad;
+    font-weight:bold;
+}
+
+/* INPUT */
+input{
+    width:100%;
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus{
+    border-color:#6a0dad;
+    box-shadow:0 0 5px rgba(106,13,173,0.4);
+}
+
+/* BOTÃO ENTRAR */
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#6a0dad;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#8a2be2;
+    transform:scale(1.03);
+}
+
+/* BOTÃO VOLTAR */
+.botao-voltar{
+    width:100%;
+    margin-top:10px;
+    padding:12px;
+    background:#ddd;
+    color:#333;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.botao-voltar:hover{
+    background:#bbb;
+}
+
+/* ERRO */
+.erro{
+    color:red;
+    margin-bottom:15px;
+    font-weight:bold;
+}

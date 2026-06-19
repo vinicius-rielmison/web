@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica PetShop</title>
+</head>
+
+
+<header>
+
+    <h1>🐶 Clínica PetShop</h1>
+
+    <nav>
+        <a href="{% url 'inicio' %}">
+            <button>Inicio</button>
+        </a> |
+        <a href="{% url 'cadastro' %}">
+            <button>Cadastrar nova consulta</button>
+        </a> |
+        <a href="{% url 'horarios' %}">
+            <button>Horarios</button>
+        </a>
+        <a href="{% url 'login_consultas' %}">
+            <button>Consultas Agendadas</button>
+        </a>
+        
+
+    </nav>
+
+</header>
+
+<body>
+
+<h1>Consultas Agendadas</h1>
+
+<table border="1">
+
+    <tr>
+        <th>Pet</th>
+        <th>Dono</th>
+        <th>Atendimento</th>
+        <th>Horário</th>
+    </tr>
+
+    {% for c in consultas %}
+
+    <tr>
+        <td>{{ c.nome_pet }}</td>
+        <td>{{ c.nome_dono }}</td>
+        <td>{{ c.atendimento }}</td>
+        <td>{{ c.horario }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+</body>
+
+
+<footer>
+
+    <h3>Contato</h3>
+
+    <p>📍 Maranguape - CE</p>
+    <p>📞 (85) 99999-9999</p>
+    <p>📧 clinicapetshop@email.com</p>
+
+    <p>© 2026 Clínica PetShop</p>
+
+</footer>
+
+</html>

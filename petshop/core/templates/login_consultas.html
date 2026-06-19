@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Consultas - PetCute</title>
+
+    <link rel="stylesheet" href="{% static 'login_consultas.css' %}">
+</head>
+
+<body>
+
+    <div class="container-login">
+
+        <!-- IMAGEM -->
+        <div class="lado-imagem">
+
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800"
+                alt="Cachorro consultando veterinário">
+
+        </div>
+
+        <!-- FORMULÁRIO -->
+        <div class="lado-formulario">
+
+            <h1>🐾 PetCute</h1>
+            <h2>Ver minhas consultas</h2>
+
+            {% if erro %}
+                <p class="erro">{{ erro }}</p>
+            {% endif %}
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Digite seu email" required>
+
+                <label>CPF</label>
+                <input type="password" name="senha" placeholder="Digite seu cpf" required>
+
+                <button type="submit">Entrar</button>
+
+            </form>
+
+            <a href="{% url 'inicio' %}">
+                <button class="botao-voltar">Voltar</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

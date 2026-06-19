@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Horários - Clínica PetShop</title>
+</head>
+
+<body>
+
+<header>
+
+    <h1>🐶 Clínica PetShop</h1>
+
+    <nav>
+        <a href="{% url 'inicio' %}">
+            <button>Inicio</button>
+        </a> |
+        <a href="{% url 'cadastro' %}">
+            <button>Cadastrar nova consulta</button>
+        </a> |
+        <a href="{% url 'horarios' %}">
+            <button>Horarios</button>
+        </a>
+        
+        <a href="{% url 'login_consultas' %}">
+            <button>Consultas Agendadas</button>
+        </a>
+</header>
+
+<hr>
+
+<main>
+
+    <h2>Horários disponíveis</h2>
+
+    <table border="1">
+
+        <tr>
+            <th>Dia</th>
+            <th>Horário</th>
+            
+        </tr>
+
+        <tr>
+            <td>Segunda-feira</td>
+            <td>07:00 - 08:00</td>
+            
+        </tr>
+
+        <tr>
+            <td>Segunda-feira</td>
+            <td>08:00 - 09:00</td>
+            
+        </tr>
+
+        <tr>
+            <td>Segunda-feira</td>
+            <td>09:00 - 10:00</td>
+            
+        </tr>
+
+        <tr>
+            <td>Terça-feira</td>
+            <td>07:00 - 08:00</td>
+        
+        </tr>
+
+        <tr>
+            <td>Terça-feira</td>
+            <td>08:00 - 09:00</td>
+            
+        </tr>
+
+        <tr>
+            <td>Quarta-feira</td>
+            <td>08:00 - 09:00</td>
+            
+        </tr>
+
+        <tr>
+            <td>Quinta-feira</td>
+            <td>10:00 - 11:00</td>
+    
+        </tr>
+
+        <tr>
+            <td>Sexta-feira</td>
+            <td>14:00 - 15:00</td>
+            <td></td>
+        </tr>
+
+
+        <tr>
+            <td>Sabado</td>
+            <td>7:00 - 12:00</td>
+            
+        </tr>
+
+    </table>
+
+</main>
+
+<hr>
+
+<footer>
+
+    <h3>Clínica PetShop</h3>
+
+    <p>📍 Maranguape - CE</p>
+    <p>📞 (85) 99999-9999</p>
+    <p>📧 clinicapetshop@email.com</p>
+
+    <p>© 2026 Clínica PetShop</p>
+
+</footer>
+
+</body>
+</html>

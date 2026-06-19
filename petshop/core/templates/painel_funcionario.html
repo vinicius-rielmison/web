@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel do Funcionário</title>
+
+    <link rel="stylesheet" href="../static/painel_fun.css">
+</head>
+
+<body>
+
+<div class="container-painel">
+
+    <!-- LADO IMAGEM (igual login) -->
+    <div class="lado-imagem">
+
+        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200"
+             alt="Veterinário cuidando de pets">
+
+    </div>
+
+    <!-- LADO CONTEÚDO (SEU PAINEL INTACTO) -->
+    <div class="lado-conteudo">
+
+        <h1>👨‍⚕️ Painel do Funcionário</h1>
+
+        <hr>
+
+        <h2>Bem-vindo funcionário!</h2>
+
+        <p>Você entrou no sistema com sucesso.</p>
+
+        <a href="{% url 'funcionario_consultas' %}">
+            <button>Ver consultas</button>
+        </a>
+
+        <br><br>
+
+        <a href="{% url 'inicio' %}">
+            <button>Voltar ao início</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

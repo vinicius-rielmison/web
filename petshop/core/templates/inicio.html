@@ -1,0 +1,237 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCute</title>
+
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+</head>
+
+<body>
+
+    <header id="cabecalho">
+
+        <div class="logo-menu">
+
+            <div class="logo-clinica">
+                <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Logo">
+                <h1>PetCute</h1>
+            </div>
+
+            <nav id="menu-navegacao">
+
+                <a href="{% url 'inicio' %}">Início</a>
+
+                <a href="{% url 'cadastro' %}">
+                    Agendar Consulta
+                </a>
+
+                <a href="{% url 'horarios' %}">
+                    Horários
+                </a>
+
+                <a href="{% url 'login_consultas' %}">
+                    Consultas
+                </a>
+
+                <a href="{% url 'login_funcionario' %}">
+                    Funcionário
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section id="banner-principal">
+
+        <div class="conteudo-banner">
+
+            <h2>
+                Cuidando do seu melhor amigo com amor e dedicação
+            </h2>
+
+            <p>
+                Consultas, vacinação, exames, cirurgias e muito mais para cães e gatos.
+            </p>
+
+            <div class="botoes-banner">
+
+                <a href="{% url 'cadastro' %}">
+                    <button class="botao-roxo">
+                        Agendar Consulta
+                    </button>
+                </a>
+
+                <a href="{% url 'login_funcionario' %}">
+                    <button class="botao-branco">
+                        Entrar como Funcionário
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="secao">
+
+        <h2>Nossos Serviços</h2>
+
+        <div class="container-servicos">
+
+            <div class="card-servico">
+                🩺
+                <h3>Consultas</h3>
+                <p>Avaliação completa do seu pet.</p>
+            </div>
+
+            <div class="card-servico">
+                💉
+                <h3>Vacinação</h3>
+                <p>Proteção contra doenças.</p>
+            </div>
+
+            <div class="card-servico">
+                ✂️
+                <h3>Banho e Tosa</h3>
+                <p>Higiene e bem-estar.</p>
+            </div>
+
+            <div class="card-servico">
+                🔬
+                <h3>Exames</h3>
+                <p>Diagnóstico rápido.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="secao">
+
+        <h2>Nossos Pacientes</h2>
+
+        <div class="galeria">
+
+            <img class="animal1"
+                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800">
+
+            <img class="animal2"
+                src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=800">
+
+            <img class="animal3"
+                src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=800">
+
+            <img class="animal4"
+                src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800">
+
+            <img class="animal5"
+                src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=800">
+
+        </div>
+
+    </section>
+
+    <section id="secao-planos">
+
+        <h2>Planos de Saúde PetCute</h2>
+
+        <div class="container-planos">
+
+            <div class="plano">
+
+                <h3>Plano Básico</h3>
+
+                <div class="preco">
+                    R$ 29,90
+                </div>
+
+                <ul>
+                    <li>✔ Consultas</li>
+                    <li>✔ Vacinas</li>
+                    <li>✔ Desconto em exames</li>
+                </ul>
+
+                <a href="{% url 'cadastro' %}"><button>contratar</button></a>
+
+            </div>
+
+            <div class="plano destaque">
+
+                <h3>Plano Premium</h3>
+
+                <div class="preco">
+                    R$ 79,90
+                </div>
+
+                <ul>
+                    <li>✔ Consultas ilimitadas</li>
+                    <li>✔ Vacinas</li>
+                    <li>✔ Exames</li>
+                    <li>✔ Emergência</li>
+                </ul>
+
+                <a href="{% url 'cadastro' %}"><button>contratar</button></a>
+
+            </div>
+
+            <div class="plano">
+
+                <h3>Plano Completo</h3>
+
+                <div class="preco">
+                    R$ 149,90
+                </div>
+
+                <ul>
+                    <li>✔ Tudo do Premium</li>
+                    <li>✔ Cirurgias</li>
+                    <li>✔ Internação</li>
+                    <li>✔ Atendimento prioritário</li>
+                </ul>
+
+                <a href="{% url 'cadastro' %}"><button>Contratar</button></a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+            <div class="info-empresa">
+
+                <h2>🐾 PetCute</h2>
+
+                <p class="descricao-empresa">
+                    Clínica veterinária especializada no cuidado completo de cães e gatos,
+                    com atendimento humanizado e profissionais qualificados.
+                </p>
+
+                <div class="contato-empresa">
+
+                    <p>📍 <strong>Endereço:</strong> Maranguape - CE</p>
+
+                    <p>📞 <strong>Telefone:</strong> (85) 99999-9999</p>
+
+                    <p>📧 <strong>Email:</strong> contato@petcute.com</p>
+
+                </div>
+
+                <p class="copyright">
+                    © 2026 PetCute - Todos os direitos reservados
+                </p>
+
+            </div>
+    </footer>
+    
+</body>
+
+</html>

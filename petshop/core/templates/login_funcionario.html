@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Funcionário - PetCute</title>
+
+    <link rel="stylesheet" href="{% static 'login_fun.css' %}">
+</head>
+
+<body>
+
+    <div class="container-login">
+
+        <!-- LADO DA IMAGEM -->
+        <div class="lado-imagem">
+
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800"
+                alt="Veterinário cuidando de pet">
+
+        </div>
+
+        <!-- LADO DO FORMULÁRIO -->
+        <div class="lado-formulario">
+
+            <h1>🐾 PetCute</h1>
+            <h2>Login do Funcionário</h2>
+
+            {% if erro %}
+                <p class="erro">{{ erro }}</p>
+            {% endif %}
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <label>Email</label>
+                <input type="text" name="email" placeholder="Digite seu email">
+
+                <label>Senha</label>
+                <input type="password" name="senha" placeholder="Digite sua senha">
+
+                <button type="submit">Entrar</button>
+                
+
+            </form>
+            <a href="{% url 'inicio' %}"><button>voltar</button></a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

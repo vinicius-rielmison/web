@@ -1,0 +1,148 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PetShop - Cadastro</title>
+</head>
+
+<body>
+
+<header>
+
+    <h1>🐶 Clínica PetShop</h1>
+
+    <nav>
+        <a href="{% url 'inicio' %}"><button>Início</button></a>
+        <a href="{% url 'cadastro' %}"><button>Cadastrar consulta</button></a>
+        <a href="{% url 'horarios' %}"><button>Horários</button></a>
+        <a href="{% url 'login_consultas' %}"><button>Consultas Agendadas</button></a>
+
+    </nav>
+
+</header>
+
+<hr>
+
+<h1>Cadastro de Consulta</h1>
+
+<!-- 🔴 ERRO -->
+{% if erro %}
+<p style="color:white; background:red; padding:10px;">
+    {{ erro }}
+</p>
+{% endif %}
+
+<!-- 🟢 SUCESSO -->
+{% if sucesso %}
+<p style="color:white; background:green; padding:10px;">
+    {{ sucesso }}
+</p>
+{% endif %}
+
+<hr>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <h2>🐾 Dados do Pet</h2>
+
+    <label>Nome do pet</label><br>
+    <input type="text" name="nomepet"><br><br>
+
+    <label>Idade</label><br>
+    <input type="text" name="idadepet"><br><br>
+
+    <label>Espécie</label><br>
+    <input type="text" name="especie"><br><br>
+
+    <label>Sexo</label><br>
+    <input type="text" name="sexo"><br><br>
+
+    <label>Peso</label><br>
+    <input type="text" name="peso"><br><br>
+
+    <label>Raça</label><br>
+    <input type="text" name="raca"><br><br>
+
+    <label>Vacinas</label><br>
+    <input type="text" name="vacinas"><br><br>
+
+    <label>Doenças</label><br>
+    <input type="text" name="doencas"><br><br>
+
+    <label>Medicamentos</label><br>
+    <input type="text" name="medicamentos"><br><br>
+
+    <label>Cirurgias</label><br>
+    <input type="text" name="cirurgias"><br><br>
+
+    <label>Alergias</label><br>
+    <input type="text" name="alergiaspet"><br><br>
+
+    <hr>
+
+    <h2>💉 Atendimento</h2>
+
+    <label>Tipo de atendimento</label><br>
+    <select name="atendimento">
+        <option value="consulta">plano basico - R$ 29,90</option>
+        <option value="vacinacao">plano Premium - R$ 79,90</option>
+        <option value="banho">plano completo - R$ 149,90</option>
+    </select>
+
+    <br><br>
+
+    <label>Horário</label><br>
+    <select name="horario">
+
+        <option value="segunda_07_08">Segunda 07:00 - 08:00</option>
+        <option value="segunda_08_09">Segunda 08:00 - 09:00</option>
+        <option value="terca_07_08">Terça 07:00 - 08:00</option>
+        <option value="quarta_08_09">Quarta 08:00 - 09:00</option>
+        <option value="quinta_10_11">Quinta 10:00 - 11:00</option>
+        <option value="sexta_14_15">Sexta 14:00 - 15:00</option>
+
+    </select>
+
+    <hr>
+
+    <h2>👤 Dono do Pet</h2>
+
+    <label>Nome</label><br>
+    <input type="text" name="nomecliente"><br><br>
+
+    <label>CPF</label><br>
+    <input type="text" name="cpf"><br><br>
+
+    <label>Telefone</label><br>
+    <input type="text" name="telefone"><br><br>
+
+    <label>Email</label><br>
+    <input type="text" name="email"><br><br>
+
+    <label>Endereço</label><br>
+    <input type="text" name="enderecocliente"><br><br>
+
+    <hr>
+
+    <input type="submit" value="Cadastrar Consulta">
+
+</form>
+
+<br>
+
+<a href="{% url 'inicio' %}">
+    <button>Voltar</button>
+</a>
+
+<hr>
+
+<footer>
+    <h3>Clínica PetShop</h3>
+    <p>Atendimento com carinho e segurança</p>
+    <p>📍 Maranguape - CE</p>
+</footer>
+
+</body>
+</html>
